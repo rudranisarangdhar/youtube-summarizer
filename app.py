@@ -1,9 +1,9 @@
 import os
 import json
-import re  # <-- Import regular expressions
+import re
 import logging
 from flask import Flask, render_template, request, jsonify, send_from_directory
-# Import specific exceptions for better error handling
+
 from youtube_transcript_api import YouTubeTranscriptApi, NoTranscriptFound, TranscriptsDisabled
 import google.generativeai as genai
 from werkzeug.utils import secure_filename
@@ -15,8 +15,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
-# WARNING: This is a security risk. It's highly recommended to use environment variables instead.
-genai.configure(api_key="AIzaSyDh2kpIT7sABiJnQJudCUh_DusL8gFgLqc")
+genai.configure(api_key="apikeyyyy")
 
 
 UPLOAD_FOLDER = 'uploads'
